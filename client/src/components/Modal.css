@@ -1,0 +1,142 @@
+.modalBackground {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalContainer {
+  width: 500px;
+  max-height: 90vh;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  flex-direction: column;
+  padding: 25px 25px 15px;
+  justify-content: space-between;
+  /*text-align: center;*/
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.modalContainer .body {
+  margin-bottom: 10px;
+}
+
+.address {
+  display: block;
+  margin: auto;
+  height: 30px;
+  width: 330px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+  background-color: lightblue;
+}
+
+.dropdown {
+  width: 330px;
+  height: 30px;
+  margin: auto;
+  display: block;
+  text-align: center;
+  border-radius: 5px;
+  margin-bottom: 45px;
+}
+
+.access-list-section {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.access-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+  font-size: 16px;
+}
+
+.access-list {
+  list-style-type: disc;
+  padding-left: 20px;
+  margin-top: 5px;
+  max-height: 100px;
+  overflow-y: auto;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+.access-list li {
+  margin-bottom: 5px;
+}
+
+.modalContainer .footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.modalContainer .footer button {
+  min-width: 100px;
+  height: 35px;
+  margin: 10px;
+  border: none;
+  background-color: cornflowerblue;
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 6px 16px; /* Add horizontal padding */
+  white-space: nowrap; /* Prevent wrapping text */
+  text-align: center;
+}
+
+#cancelBtn {
+  background-color: crimson;
+  color: white;
+}
+
+.modalContainer .footer button:not(#cancelBtn) {
+  background-color: cornflowerblue;
+  color: white;
+}
+
+.dropdown option {
+  font-size: 14px;
+}
+
+.notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4caf50;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 999;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0%   { opacity: 0; transform: translateY(-10px); }
+  10%  { opacity: 1; transform: translateY(0); }
+  90%  { opacity: 1; }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
